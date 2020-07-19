@@ -1,0 +1,92 @@
+Classfull IP Addressing
+
+An IP Address in a information about how to reach a 
+specific machine over computer networks - especially 
+if they are outside LAN.
+
+An IP address is a 32 bit unique address having 
+an address space of 2^32.
+
+Example:
+    10000000 01100110 00001110 00001001
+    128.102.14.9 (decimal)
+    80.66.0E.09 (Hex)
+
+Validations
+    allowed per octet- 0 to 255 (0.0.0.0 to 255.255.255.255)
+    No zeros prefixed - 025 is invalid
+
+ClassFull Addressing
+    Class A
+    Class B
+    Class C
+    Class D - Multicast
+    Class E - Experimental
+
+    Order of bits in the First Octet determines the Class
+    
+    IPv4 has two parts
+        Network ID - id, how many networks
+        Host ID - id, how many devices connected to it
+    
+    Each IST or network provider assigns IP address to 
+    each device thats connected to its network
+
+    While counting no. of hosts 2 bits are not counted
+        1st IP address is the NEtwork Number
+        last IP Address is used for broadcast purposes
+    
+Class A 
+    Large number of Hosts
+    Network ID is 8 bits long
+    Host ID is 24 bits long
+
+    highest order bit = 0
+    no of networks = 2^7-2 = 128-2 = 126 network ID's
+    no of hosts = 2^24-2 = 16,777,214 host ID's
+
+    1.x.x.x -> 126.x.x.x
+
+Class B
+    Medium to Intermediate no. of Hosts
+    Network ID is 16 bits long
+    Host ID is 8 Bit long
+
+    highest order bit = 10
+    no of networks = 2^14 = 16384 networks
+    no of hosts = 2^16-2 = 65534 hosts
+
+    128.0.x.x -> 191.255.x.x
+
+Class C
+    Small Sized Networks
+    Network ID is 24 bits long
+    Host Id is 8  bits long
+
+    Highest order bit = 110
+
+    192.0.0.x -> 223.255.255.x
+
+Class D
+    reserved for Multicast
+    
+    Highest order bit = 1110
+    remaining 28 bits are for host id
+
+    224.0.0.0 -> 239.255.255.255.255
+
+Class E
+    reserved for experimental and research purposes
+    
+    highest order bit = 1111
+
+    240.0.0.0 -> 255.255.255.254
+
+
+Range of special IP addresses:
+
+169.254.0.0 – 169.254.0.16 : Link local addresses
+127.0.0.0 – 127.0.0.8 : Loop-back addresses
+0.0.0.0 – 0.0.0.8 : used to communicate within the current network.
+
+
